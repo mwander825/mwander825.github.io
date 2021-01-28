@@ -3,6 +3,7 @@ import TextField from "@material-ui/core/TextField";
 import InputAdornment from '@material-ui/core/InputAdornment';
 import { makeStyles } from "@material-ui/core/styles";
 import CommandParser from "./UserLog.jsx";
+import {PageContext, RoomContext} from "../App.js"
 import Typography from '@material-ui/core/Typography';
 import Rooms from "../Rooms.js"
 import "../App.css";
@@ -29,6 +30,7 @@ function Terminal(props) {
         overflowX: "hidden",
         backgroundColor: "black"
     };
+
     // Array destructuring
     const [userCommand, setUserCommand] = useState("")
     const [userLog, setUserLog] = useState([])

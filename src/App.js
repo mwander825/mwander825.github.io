@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState, setState } from 'react';
 import { BrowserRouter, Link, Route } from 'react-router-dom';
 import "./App.css";
 import Terminal from './components/Terminal'
@@ -19,6 +19,12 @@ function App(props) {
     setRoomState: () => {}
   });
 
+  const [flags, setFlags] = useState(Array(3).fill(0))
+  const FlagsContext = React.createContext({
+    flags: Array(3).fill(0),
+    setFlags: () => {}
+  });
+
   const PageUpdater = () => {
     const {pageState, setPageState} = React.useContext(PageContext)
 
@@ -26,8 +32,8 @@ function App(props) {
   const pageValue = {pageState, setPageState};
   const roomValue = {roomState, setRoomState}
   return (
-    <pageContext.Provider value={pageContext}>
-      <roomContext.Provider value={roomContext}>
+    <PageContext.Provider value={PageContext}>
+      <RoomContext.Provider value={RoomContext}>
         <BrowserRouter basename="/">
           <div id="App">
             <div className="header">
@@ -40,8 +46,8 @@ function App(props) {
             <Route component={Terminal}/>
           </div>
         </BrowserRouter>
-      </roomContext.Provider>
-    </pageContext.Provider>
+      </RoomContext.Provider>
+    </PageContext.Provider>
   );
 }
 

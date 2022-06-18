@@ -1,11 +1,12 @@
-import { SentimentSatisfied } from "@material-ui/icons";
-
 export default
 {
     "pen": {
-        look: "A pen.",
+        look: "A retractable ballpoint pen.",
         take: "You took the pen.",
-        use: "uh"
+        use: {
+            onSelf: "Click.",
+            paper: ""
+        }
     },
     "paper": {
         usefulCommands: ["look", "take"]
@@ -14,7 +15,8 @@ export default
         usefulCommands: ["look", "take"]
     },
     "whiteboard": {
-        usefulCommands: ["look"]
+        usefulCommands: ["look"],
+        flagged: 1
     },
     "poster": {
         usefulCommands: ["look"]
@@ -25,11 +27,15 @@ export default
     "eraser": {
         usefulCommands: ["look", "take", "use"]
     },
-    "break_unlit_light_switch": {
-        look: "A fuzzy object in the shape of a light switch.",
-        use: Setguy("bigMan")
-    }
-    "break_light_switch": {
-        look: "An oft-used light switch."
+    "switch": {
+        "break_unlit": {
+            look: "A fuzzy-looking object in the shape of a light switch.",
+            use: ["You flip the switch. Suddenly the", {0: 1}]
+        },
+        "break_lit": {
+            look: "An oft-used light switch.",
+            use: ["You flip the switch, plunging the break room into darkness.", {0: 0}]
+        },
+        flagged: 0
     }
 }

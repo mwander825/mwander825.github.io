@@ -1,11 +1,12 @@
 import React, { useEffect, useState, setState } from 'react';
 import Rooms from "../Rooms.js";
 import Items from "../Items.js";
-import {PageContext, RoomContext, FlagsContext} from "../App.js";
+//import {PageContext, RoomContext, FlagsContext} from "../App.js";
+import App from "../App.js";
 
 function CommandParser(props) {
-    const {room, setRoom} = React.useContext(RoomContext)
-    const {flags, setFlags} = React.useContext(FlagsContext)
+    const {room, setRoom} = React.useContext(App.RoomContext)
+    const {flags, setFlags} = React.useContext(App.FlagsContext)
     const wordRegex = /\w+/g
     const primString = String(props.commandString)
     const tokens = primString.match(wordRegex)
@@ -15,8 +16,8 @@ function CommandParser(props) {
     console.log(primString)
     console.log(tokens)
     
-    mutableRooms = Rooms;
-    mutableItems = Items;
+    var mutableRooms = Rooms;
+    var mutableItems = Items;
     const [inventory, setInventory] = useState([])
 
     if (tokens === null) {

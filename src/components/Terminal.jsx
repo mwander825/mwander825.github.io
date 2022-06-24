@@ -2,8 +2,8 @@ import React, { useEffect, useState, setState } from 'react';
 import TextField from "@material-ui/core/TextField";
 import InputAdornment from '@material-ui/core/InputAdornment';
 import { makeStyles } from "@material-ui/core/styles";
-//import CommandParser from "./UserLog.jsx";
-//import App from "../App.js"
+import CommandParser from "./UserLog.jsx";
+import App from "../App.js"
 import Typography from '@material-ui/core/Typography';
 import Rooms from "../Rooms.js"
 import "../App.css";
@@ -36,6 +36,10 @@ function Terminal(props) {
     const [userLog, setUserLog] = useState([])
     const [commandCount, setCommandCount] = useState(0)
     
+    // contexts
+    const RoomContext = App.RoomContext
+    console.log(App.fuck)
+    console.log(RoomContext)
     // Monitor value of the command input Textfield
     const changeHandler = (value) => {
         setUserCommand(value)
@@ -76,12 +80,13 @@ function Terminal(props) {
                 >
                     {">" + (val.command)}
                 </span>
-                
+                <span>
+                <RoomContext.Provider value={val}>
+                    <CommandParser ind={val.ind} commandString={val.command}/>
+                </RoomContext.Provider>
+                </span>
             </div>
-        )
-        //<RoomContext.Provider>
-        //<CommandParser ind={val.ind} commandString={val.command}/>
-        //</RoomContext.Provider>
+        )  
     });
 
     const classes = useStyles();

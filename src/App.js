@@ -1,7 +1,7 @@
 import React, { useEffect, useState, setState } from 'react';
 import { BrowserRouter, Link, Route } from 'react-router-dom';
 import "./App.css";
-import Terminal from './components/Terminal.jsx'
+import Terminal from './components/Dungeon/Terminal.jsx'
 
 function App(props) {
   //const [pageContext, setPageContext] = React.createContext('game')
@@ -34,8 +34,8 @@ function App(props) {
   const roomValue = {roomState, setRoomState}
 
   return (
-    <PageContext.Provider value={PageContext}>
-      <RoomContext.Provider value={RoomContext}>
+    <PageContext.Provider value={PageContext.pageState}>
+      <RoomContext.Provider value={RoomContext.roomState}>
         <BrowserRouter basename="/">
           <div id="App">
             <div className="header">

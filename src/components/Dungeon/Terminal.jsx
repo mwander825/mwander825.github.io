@@ -2,10 +2,10 @@ import React, { useEffect, useState, setState } from 'react';
 import TextField from "@material-ui/core/TextField";
 import InputAdornment from '@material-ui/core/InputAdornment';
 import { makeStyles } from "@material-ui/core/styles";
-import CommandParser from "./UserLog.jsx";
-import App from "../App.js"
+import CommandParser from "../UserLog.jsx";
+import App from "../../App.js"
 import Typography from '@material-ui/core/Typography';
-import Rooms from "../Rooms.js"
+import Rooms from "../../Rooms.js"
 import "../App.css";
 
 const useStyles = makeStyles(theme =>({

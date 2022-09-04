@@ -2,6 +2,18 @@
   position: relative;
 }
 
+body {
+  background-color: #DDC3F8;
+}
+
+.container {
+  color: white;
+}
+
+a:link {
+  text-decoration: none;
+}
+
 .header {
   height: 10%;
   width: 100%;
@@ -9,13 +21,20 @@
   display: flex;
   justify-content: space-around;
   z-index: 1;
-  background-color: #282c34;
   position: absolute;
 }
 
-.navButton {
+.navButton:hover {
+  display: flex;
+  color: transparent;
   display: "block";
-  padding: "relative";
+}
+
+.navButton:hover::before {
+  display: flex;
+  color: black;
+  content: attr(data-hover);
+  position: absolute;
 }
 
 .log {

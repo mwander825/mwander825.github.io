@@ -1,12 +1,12 @@
 import React, { useEffect, useState, setState } from 'react';
-import { BrowserRouter, Link, Route } from 'react-router-dom';
+import { BrowserRouter, HashRouter, Link, Route } from 'react-router-dom';
 import "./App.css";
 
 import About from "./components/About.jsx"
 
 function App(props) {
   return (
-        <BrowserRouter basename="/">
+        <HashRouter basename="/">
           <div id="App">
             <div class="header">
               <span id="about" data-hover="Experientia"><Link to="experience" className="navButton">Experience</Link></span>
@@ -19,7 +19,7 @@ function App(props) {
               <About/>
               </Route>    
           </div>
-        </BrowserRouter>
+        </HashRouter>
   );
 }
 

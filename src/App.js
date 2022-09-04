@@ -6,12 +6,12 @@ import About from "./components/About.jsx"
 
 function App(props) {
   return (
-        <HashRouter basename="/">
+        <HashRouter basename="https://mwander825.github.io/">
           <div id="App">
             <div class="header">
               <span id="about" data-hover="Experientia"><Link to="experience" className="navButton">Experience</Link></span>
               <Link to="projects"><span id="projects" class="navButton" data-hover="Prodita">Projects</span></Link>
-              <Link to="/"><span id="about" class="navButton" data-hover="De Me">About</span></Link>
+              <Link to="https://mwander825.github.io/"><span id="about" class="navButton" data-hover="De Me">About</span></Link>
               <span id="writings"><Link to="writings"  className="navButton">Writings</Link></span>
               <span id="dungeon"><Link to="dungeon" className="navButton">Dungeon</Link></span>
             </div>

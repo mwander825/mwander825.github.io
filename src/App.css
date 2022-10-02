@@ -7,7 +7,32 @@ body {
 }
 
 .container {
-  color: white;
+  color: black;
+  position: relative;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  margin-right: 150px;
+  margin-left: 80px;
+}
+
+header.title {
+  top: 0;
+  position: relative;
+  text-align: left;
+}
+
+#pp {
+  float: right;
+}
+
+#aboutpage {
+  color: black;
+  display: inline-block;
+  flex-direction: row;
+  text-align: left;
+  height:auto;
+  width:auto; 
+  margin: 5% 15%;
 }
 
 a:link {
@@ -15,22 +40,24 @@ a:link {
 }
 
 .header {
-  height: 10%;
+  height: 20%;
   width: 100%;
   top: 0;
+  bottom: 10;
   display: flex;
   justify-content: space-around;
   z-index: 1;
-  position: absolute;
+  position: sticky;
 }
 
 .navButton:hover {
+  animation: fadeIn 0.5s;
   display: flex;
   color: transparent;
-  display: "block";
 }
 
 .navButton:hover::before {
+  animation: fadeIn 0.5s;
   display: flex;
   color: black;
   content: attr(data-hover);
@@ -59,3 +86,27 @@ a:link {
   text-align: left;
 }
 
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@-moz-keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@-webkit-keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@-o-keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@-ms-keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}

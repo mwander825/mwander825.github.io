@@ -1,12 +1,13 @@
 import React, { useEffect, useState, setState } from 'react';
-import { BrowserRouter, HashRouter, Link, Route } from 'react-router-dom';
+import { BrowserRouter, HashRouter, Switch, Link, Route } from 'react-router-dom';
 import "./App.css";
 
 import About from "./components/About.jsx"
+import Dungeon from "./components/Dungeon.jsx"
 
 function App(props) {
   return (
-        <HashRouter basename="/">
+    <BrowserRouter>
           <div id="App">
             <div class="header">
               <span id="about" data-hover="Experientia"><Link to="experience" className="navButton">Experience</Link></span>
@@ -15,11 +16,16 @@ function App(props) {
               <span id="writings"><Link to="writings"  className="navButton">Writings</Link></span>
               <span id="dungeon"><Link to="dungeon" className="navButton">Dungeon</Link></span>
             </div>
+            <Switch>
               <Route exact path="/">
-              <About/>
-              </Route>    
+                <About />
+              </Route>
+              <Route path="/dungeon">
+                <Dungeon />
+              </Route>
+            </Switch>
           </div>
-        </HashRouter>
+    </BrowserRouter>
   );
 }
 

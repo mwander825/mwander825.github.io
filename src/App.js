@@ -4,21 +4,29 @@ import "./App.css";
 
 import About from "./components/About.jsx"
 import Dungeon from "./components/Dungeon.jsx"
+import Writings from "./components/Writings.jsx"
+import Projects from "./components/Projects.jsx"
 
 function App(props) {
   return (
     <BrowserRouter>
           <div id="App">
             <div class="header">
-              <span id="about" data-hover="Experientia"><Link to="experience" className="navButton">Experience</Link></span>
+              <Link to="experience"><span id="experience" class="navButton" data-hover="Peritia">Experience</span></Link>
               <Link to="projects"><span id="projects" class="navButton" data-hover="Prodita">Projects</span></Link>
               <Link to="/"><span id="about" class="navButton" data-hover="De Me">About</span></Link>
-              <span id="writings"><Link to="writings"  className="navButton">Writings</Link></span>
-              <span id="dungeon"><Link to="dungeon" className="navButton">Dungeon</Link></span>
+              <Link to="writings"><span id="writings" class="navButton" data-hover="Scripta">Writings</span></Link>
+              <Link to="dungeon"><span id="dungeon" class="navButton" data-hover="Robur?">Dungeon</span></Link>
             </div>
             <Switch>
+              <Route path="/projects"> 
+                <Projects />
+              </Route>
               <Route exact path="/">
                 <About />
+              </Route>
+              <Route path="/writings">
+                <Writings />
               </Route>
               <Route path="/dungeon">
                 <Dungeon />

@@ -112,6 +112,25 @@ a {
   user-select: none;
 }
 
+.accordion-title {
+  cursor: pointer;
+  user-select: none;
+}
+
+.bellows-Latin-verse {
+  padding-bottom: 5%;
+}
+
+.line-Latin-verse {
+  padding-top: 1%;
+  padding-bottom: 1%;
+}
+
+.bellows-Latin-prose {
+  width: 50%;
+  padding-bottom: 5%;
+}
+
 .log {
   display: "block";
   word-wrap: break-word;

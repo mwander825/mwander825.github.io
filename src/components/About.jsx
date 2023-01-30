@@ -1,5 +1,5 @@
 import React from 'react';
-import pp from "../static/media/pp.png"
+import pp from "../static/media/pp.png";
 
 const About = () => {
     return (

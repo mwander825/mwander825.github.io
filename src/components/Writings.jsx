@@ -14,11 +14,11 @@ const Writings = () => {
             case "bellows-English-verse":
                 children = val["content"].map((line, index) => {
                     return (
-                        <div class={val["lineClass"]}>
+                        <p>
                         <span key={index}>
                         {line}{(index+1) % 5 == 0 && <span style={{"padding-left": "15%", "user-select": "none"}}>{index+1}</span>}
                         </span>
-                        </div>
+                        </p>
                     );
                 });
                 break;
@@ -26,12 +26,13 @@ const Writings = () => {
             case "bellows-English-prose":
                 children = val["content"].map((line, index) => {
                     return (
-                        <div class={val["lineClass"]}>
+                        <div>
                         <p key={index}>
                         <span>[{index+1}] </span>{line}
                         </p>
                         </div>
                         );
+                        
                 });
                 break;
         }
@@ -47,9 +48,10 @@ const Writings = () => {
     return (
         <div id="writings" class="page-container">
             <title>Writings</title>
+            <h1>Writings</h1>
             <span>A collection of various scriptures</span>
             <div class="Latin-links">
-                <h1>Latin</h1>
+                <h2>Latin</h2>
                 <ul>
                 <li>{formatAccordion("Magistro")}</li>
                 <li>{formatAccordion("Feli Felici")}</li>

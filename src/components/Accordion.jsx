@@ -8,11 +8,10 @@ function Accordion(props) {
     return (
         <div class='accordion'>
             <div class="accordion-title" onClick={() => setIsDropped(!isDropped)}>
-                {isDropped ? '- ' : '+ '}<b>{props.name}</b>         
+                <span style={{"padding-right": "2px", "width": "13px", "display": "inline-block"}}>{isDropped ? '-' : '+'}</span>
+                <span><b>{props.name}</b></span>  
             </div>
-            <div class={props.bellowsClass}> 
-                {isDropped && props.text}
-            </div>
+            {isDropped && props.text}
         </div>
     )
 }

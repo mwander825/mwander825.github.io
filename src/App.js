@@ -12,11 +12,11 @@ function App(props) {
     <BrowserRouter>
           <div id="App">
             <div class="header">
-              <Link to="experience"><span id="experience" class="navButton" data-hover="Peritia">Experience</span></Link>
-              <Link to="projects"><span id="projects" class="navButton" data-hover="Prodita">Projects</span></Link>
-              <Link to="/"><span id="about" class="navButton" data-hover="De Me">About</span></Link>
-              <Link to="writings"><span id="writings" class="navButton" data-hover="Scripta">Writings</span></Link>
-              <Link to="dungeon"><span id="dungeon" class="navButton" data-hover="Robur?">Dungeon</span></Link>
+              <Link to="experience" class="navLink"><span id="experience" class="navButton" data-hover="Peritia">Experience</span></Link>
+              <Link to="projects" class="navLink"><span id="projects" class="navButton" data-hover="Prodita">Projects</span></Link>
+              <Link to="/" class="navLink"><span id="about" class="navButton" data-hover="De Me">About</span></Link>
+              <Link to="writings" class="navLink"><span id="writings" class="navButton" data-hover="Scripta">Writings</span></Link>
+              <Link to="dungeon" class="navLink"><span id="dungeon" class="navButton" data-hover="Robur?">Dungeon</span></Link>
             </div>
             <Switch>
               <Route path="/projects"> 

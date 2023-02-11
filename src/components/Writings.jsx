@@ -1,8 +1,18 @@
 import React from 'react';
 import Accordion from './Accordion.jsx';
 import writingsObject from '../static/Writings.js';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link,
+  useRouteMatch,
+  useParams
+} from "react-router-dom";
 
 const Writings = () => {
+
+    let match = useRouteMatch();
 
     const formatAccordion = (key) =>
     {
@@ -50,6 +60,11 @@ const Writings = () => {
             <title>Writings</title>
             <h1>Writings</h1>
             <span>A collection of various scriptures</span>
+            <div class="English-links">
+                <h2>English</h2>
+            <Link to={`${match.url}/cantus-inhabitandi`}><h3>Cantus Inhabitandi</h3></Link>
+                Songs to be dwelled in
+            </div>
             <div class="Latin-links">
                 <h2>Latin</h2>
                 <ul>
@@ -58,8 +73,12 @@ const Writings = () => {
                 <li>{formatAccordion("Sine Nomine Imperfectum I")}</li>
                 </ul>
             </div>
-        </div>   
-         
+            <Switch>
+                <Route path={`${match.path}/cantus-inhabitandi`}>
+                {match.path}
+                </Route>
+            </Switch>
+        </div>    
     );
 }
 

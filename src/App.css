@@ -99,6 +99,10 @@ a.github-link {
   align-items: center;
 }
 
+img {
+  background-color: transparent;
+}
+
 img.github-link {
   height: 32px;
   padding-left: 1%;

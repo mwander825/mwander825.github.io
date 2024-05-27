@@ -1,6 +1,7 @@
 import React from 'react';
 import Accordion from './Accordion.jsx';
 import writingsObject from '../static/Writings.js';
+import CI from './CI.jsx'
 import {
   BrowserRouter as Router,
   Switch,
@@ -26,8 +27,9 @@ const Writings = () => {
                     return (
                         <p>
                         <span key={index}>
-                        {line}{(index+1) % 5 == 0 && <span style={{"padding-left": "15%", "user-select": "none"}}>{index+1}</span>}
+                        {line}
                         </span>
+                        {(index+1) % 5 == 0 && <span style={{"padding-left": "15%", "user-select": "none"}}>{index+1}</span>}
                         </p>
                     );
                 });
@@ -62,23 +64,20 @@ const Writings = () => {
             <span>A collection of various scriptures</span>
             <div class="English-links">
                 <h2>English</h2>
-            <Link to={`${match.url}/cantus-inhabitandi`}><h3>Cantus Inhabitandi</h3></Link>
-                Songs to be dwelled in
+            <div style={{"display": "inline-block"}}><Link to={`${match.url}/cantus-inhabitandi`}><h3>Cantus Inhabitandi</h3></Link></div>
+                <p>Songs to be dwelled in</p>
             </div>
             <div class="Latin-links">
                 <h2>Latin</h2>
-                <ul>
-                <li>{formatAccordion("Magistro")}</li>
+                <ul style={{"width": "100%", "display": "block"}}>
+                <li>{formatAccordion("De Umbris")}</li>
                 <li>{formatAccordion("Feli Felici")}</li>
+                <li>{formatAccordion("Magistro")}</li>
+                <li>{formatAccordion("Meae Radices Robustaeque Altae Sunt")}</li>
                 <li>{formatAccordion("Sine Nomine Imperfectum I")}</li>
                 </ul>
             </div>
-            <Switch>
-                <Route path={`${match.path}/cantus-inhabitandi`}>
-                {match.path}
-                </Route>
-            </Switch>
-        </div>    
+        </div>
     );
 }
 

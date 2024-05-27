@@ -71,6 +71,7 @@ div.wip {
 .Latin-links {
   margin-top: 3%;
   margin-bottom: 3%;
+  display: block;
 }
 
 ul {
@@ -99,6 +100,11 @@ a.github-link {
   align-items: center;
 }
 
+a.other-button-link {
+  justify-content: center;
+  align-items: center;
+}
+
 img {
   background-color: transparent;
 }
@@ -108,6 +114,12 @@ img.github-link {
   padding-left: 1%;
   vertical-align: bottom; 
 
+}
+
+img.other-button-link {
+  height: 20px;
+  padding-left: 1%;
+  vertical-align: bottom; 
 }
 
 .header {
@@ -148,10 +160,12 @@ a.navLink:visited{
   cursor: pointer;
   user-select: none;
   display: inline-block;
+  /*width: 100%;*/
 }
 
 .bellows-Latin-verse {
   padding-bottom: 5%;
+  width: 100%
 }
 
 .line-Latin-verse {

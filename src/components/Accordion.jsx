@@ -7,10 +7,10 @@ function Accordion(props) {
 
     return (
         <div class='accordion'>
-            <div class="accordion-title" onClick={() => setIsDropped(!isDropped)}>
+            <span class="accordion-title" onClick={() => setIsDropped(!isDropped)}>
                 <span style={{"padding-right": "2px", "width": "13px", "display": "inline-block"}}>{isDropped ? '-' : '+'}</span>
                 <span><b>{props.name}</b></span>  
-            </div>
+            </span>
             {isDropped && props.text}
         </div>
     )

@@ -103,6 +103,10 @@ img {
   background-color: transparent;
 }
 
+img.pp {
+  padding-left: 2%;
+}
+
 img.github-link {
   height: 32px;
   padding-left: 1%;
@@ -148,10 +152,12 @@ a.navLink:visited{
   cursor: pointer;
   user-select: none;
   display: inline-block;
+  width: 100%;
 }
 
 .bellows-Latin-verse {
   padding-bottom: 5%;
+  width: 100%
 }
 
 .line-Latin-verse {

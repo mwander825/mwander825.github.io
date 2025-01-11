@@ -26,6 +26,22 @@ const Projects = () => {
 
                 </ul>
             </div>
+            <div>
+                        <h2 class="project-link">
+                        <a rel="noopener noreferrer" target="_blank"  
+                        title="&quot;Collected Sounds&quot;"
+                        href="https://github.com/mwander825/foo-soni-collecti">
+                            foo_soni_collecti (Soni Collecti)
+                        </a>
+                        <a href="https://github.com/mwander825/foo-soni-collecti" rel="noopener noreferrer" target="_blank" class="github-link">
+                            <img class="github-link" src={github_mark} alt="(GitHub)"/>
+                            </a>
+                        </h2>
+                   <p>
+                   An old foobar2000 component which I revived for the new x64 version of foobar2000,
+                   which is an offline scrobbler that logs playback statistics to a local .csv file.
+                   </p>
+            </div>
         </div>    
     );
 }

@@ -1,6 +1,7 @@
 import React from 'react';
 import Accordion from './Accordion.jsx';
 import writingsObject from '../static/Writings.js';
+import CI from './CI.jsx'
 import {
   BrowserRouter as Router,
   Switch,
@@ -67,18 +68,14 @@ const Writings = () => {
             </div>
             <div class="Latin-links">
                 <h2>Latin</h2>
-                <ul>
-                <li>{formatAccordion("Magistro")}</li>
+                <ul style={{"width": "100%"}}>
+                <li>{formatAccordion("De Umbris")}</li>
                 <li>{formatAccordion("Feli Felici")}</li>
+                <li>{formatAccordion("Magistro")}</li>
                 <li>{formatAccordion("Sine Nomine Imperfectum I")}</li>
                 </ul>
             </div>
-            <Switch>
-                <Route path={`${match.path}/cantus-inhabitandi`}>
-                {match.path}
-                </Route>
-            </Switch>
-        </div>    
+        </div>
     );
 }
 
